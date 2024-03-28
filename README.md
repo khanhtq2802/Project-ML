@@ -9,7 +9,7 @@ Chia việc:
 
 Dương Bùi:
 
-Minh Nguyễn:
+Minh Nguyễn: K-nearest neighbors
 
 Trung Dũng:
 

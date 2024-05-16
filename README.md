@@ -18,3 +18,11 @@ Minh Hà:
 Thu Uyên: SVM
 
 Quốc Khánh:
+
+Vấn đề cần giải quyết : 
+
+- Chia giá theo khoảng (8-10 khoảng)
+- Biểu đồ tầm quan trọng của các feature
+- Report
+- hypertuning
+- UI

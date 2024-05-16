@@ -15,7 +15,7 @@ Trung Dũng:
 
 Minh Hà:
 
-Thu Uyên: SVM
+Thu Uyên: 
 
 Quốc Khánh:
 

@@ -22,6 +22,12 @@ Quốc Khánh:
 Vấn đề cần giải quyết : 
 
 - Chia giá theo khoảng (8-10 khoảng)
+   + <20
+   + 20->30
+   + 30->45
+   + 45->60
+   + 60+
+  Split
 - Biểu đồ tầm quan trọng của các feature
 - Report
 - hypertuning

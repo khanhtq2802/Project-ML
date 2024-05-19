@@ -7,7 +7,7 @@ https://www.overleaf.com/6737224222khpvjbdyxghm#cfe56a
 Chia việc:
 
 
-Dương Bùi:
+Dương Bùi: Linear Regression & Decision Tree Regression
 
 Minh Nguyễn: K-nearest neighbors
 
@@ -32,3 +32,4 @@ Vấn đề cần giải quyết :
 - Report
 - hypertuning
 - UI
+- Slide: Duong Bui

@@ -18,7 +18,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.svm import SVR
 from sklearn.ensemble import BaggingRegressor
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error,r2_score
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.ensemble import AdaBoostRegressor
@@ -78,8 +78,9 @@ scoring='neg_mean_squared_error'
 results_LR=cross_val_score(model_LR,x_selected, y_scaled, cv=kfold, scoring=scoring)
 print(results_LR.mean())
 
-final_gradient=GradientBoostingRegressor(learning_rate= 0.10903, max_depth= 5, n_estimators= 54)
-final_gradient.fit(x_selected, y_scaled)
+model_LR.fit(x_selected, y_scaled)
+r2 = r2_score(y_scaled, model_LR.predict(x_selected))
+print(f"R^2 Score: {r2}")
 test=pd.read_csv("C:/Users/Minh MPC/Downloads/test_file.csv")
 test.head()
 
@@ -87,14 +88,19 @@ Id_pred=test['id']
 Room_pred=test['room']
 Area_pred=test['area']
 Toilet_pred=test['toilet']
-test.drop(['room','area','toilet','id'], inplace=True, axis=1)
+x_pred=test['x']
+y_pred=test['y']
+khoang_cach_pred=test['khoang_cach']
+n_hospital_pred=test['n_hospital']
+test.drop(['room','area','toilet','id','x', 'y', 'khoang_cach',
+       'n_hospital'], inplace=True, axis=1)
 test_en=pd.get_dummies(test,drop_first=True)
 print(test_en.shape)
 
 result_test= x_en._append(test_en, sort=False)
 result_test.shape
 
-test_en_2=result_test[2204:8813]
+test_en_2=result_test[2204:4407]
 test_en_2.shape
 test_en_2[test_en_2.columns[test_en_2.isna().sum() > 0]].isna().mean()*100
 
@@ -109,13 +115,13 @@ test_scaled.head()
 test_selected=test_scaled[x_features]
 test_selected.head()
 
-ypred_scale=final_gradient.predict(test_selected)
+ypred_scale=model_LR.predict(test_selected)
 ypred_scale=pd.DataFrame(ypred_scale)
 ypred=target_scaler.inverse_transform(ypred_scale)
 ypred
 
 pred_data=pd.DataFrame(ypred,columns=['price'])
-target_pred=pd.concat([Id_pred,Room_pred,Area_pred,Toilet_pred,pred_data],axis=1)
+target_pred=pd.concat([Id_pred,Room_pred,Area_pred,Toilet_pred,x_pred,y_pred,khoang_cach_pred,n_hospital_pred,pred_data],axis=1)
 target_pred.head()
 
 target_pred

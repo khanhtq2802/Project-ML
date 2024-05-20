@@ -1,0 +1,25 @@
+lmm = dsp.co(model='command-nightly', api_key="swkXBHOQaz7R7lvVr11udeCbNc5xnYf4tCwprMYa")
+AIzaSyDKiKpr729InSVE85Az1rMBxsnVv5a7lCk
+!pip install dspy-ai
+!pip install dspy-ai[google-vertex-ai]
+!pip install bigframes==0.26.0
+from google.oauth2 import service_account
+
+credentials = service_account.Credentials.from_service_account_file(
+    '/content/dspy-422315-6508888c40c8.json')
+from dsp.modules import GoogleVertexAI  # Import the GoogleVertexAI class
+
+# Initialize the class with the model name and parameters for Vertex AI
+vertex_ai = GoogleVertexAI(
+    model_name="text-bison@002",
+    project="dspy-422315",
+    location="us-central1",
+    credentials=credentials)
+import dspy
+import dsp
+dspy.configure(lm=vertex_ai)
+qa = dspy.ChainOfThought('question -> answer')
+
+# Run with the default LM configured with `dspy.configure` above.
+response = qa(question="How many floors are in the castle David Gregory inherited?")
+print(response.answer)

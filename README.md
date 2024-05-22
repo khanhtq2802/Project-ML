@@ -17,7 +17,7 @@ Minh Hà:
 
 Thu Uyên: 
 
-Quốc Khánh:
+Quốc Khánh: Bagging Decision Tree, Gradient Booosting, Random Forest, XGBoost
 
 Vấn đề cần giải quyết : 
 

@@ -15,7 +15,7 @@ Trung Dũng:
 
 Minh Hà:
 
-Thu Uyên: 
+Thu Uyên: SVM
 
 Quốc Khánh: Bagging Decision Tree, Gradient Booosting, Random Forest, XGBoost
 

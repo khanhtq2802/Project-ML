@@ -31,5 +31,5 @@ Vấn đề cần giải quyết :
 - Biểu đồ tầm quan trọng của các feature
 - Report
 - hypertuning
-- UI
+- UI: Quốc Khánh
 - Slide: Duong Bui

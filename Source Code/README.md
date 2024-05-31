@@ -10,11 +10,10 @@ conda activate IT3190E_Group_4
 ```sh
 pip install -r requirements.txt
 ```
+- data_processing.ipynb is used to classify prices into labels
 
-- data_processing.ipynb dùng để phân loại giá vào các nhãn
+- The hyperparameter tuning folder is used to find the best hyperparameters of the models
 
-- thư mục hyperparameter tuning dùng để tìm ra siêu tham số tốt nhất của các model
+- model.ipynb aggregates hyperparameters and evaluates models
 
-- model.ipynb tổng hợp các siêu tham số và đánh giá các mô hình
-
-- demo.ipynb dùng để demo
+- demo.ipynb is used for demo

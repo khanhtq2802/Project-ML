@@ -12,7 +12,7 @@ from sklearn import svm
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 
 # Load training data
-train_data = pd.read_csv("Training Data/regression/train.csv")
+train_data = pd.read_csv("Training Data/raw_data/train.csv")
 train_data.head(10)
 
 # Create the bins for the classes
@@ -76,7 +76,7 @@ knn = KNeighborsClassifier(n_neighbors=9, metric='manhattan')
 knn.fit(X_train, y_train)
 
 # Load validation data
-validation_data = pd.read_csv("Training Data/regression/val.csv")
+validation_data = pd.read_csv("Training Data/raw_data/val.csv")
 validation_data['price_class'] = pd.cut(validation_data['price'], price_bins, labels=False)
 
 # Get the unique class labels

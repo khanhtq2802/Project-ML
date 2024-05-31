@@ -17,3 +17,5 @@ Member:
 - Bui Thi Thu Uyen 20225537
 
 Supervising Lecturer: TS. Than Quang Khoat
+
+link to github: https://github.com/khanhtq2802/Project-ML.git

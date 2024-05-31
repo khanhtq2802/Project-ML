@@ -12,7 +12,7 @@ pip install -r requirements.txt
 ```
 - data_processing.ipynb is used to classify prices into labels
 
-- The hyperparameter tuning folder is used to find the best hyperparameters of the models
+- The hyperparameter tuning folder is used to find the best hyperparameters of the models. *Note: hyperparameter tuning may take time to run*
 
 - model.ipynb aggregates hyperparameters and evaluates models
 
